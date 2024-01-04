@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Game Hub - Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Marte Lilleberre">
+  <meta name="dcterms.created" content="sat., 29 apr 2023 18:59:56 GMT">
+  <meta name="description" content="Contact Game Hub by filling out the form on this site.">
+  <meta name="keywords" content="console games, playstation, xbox, nintendo, PC">
+  <script src="https://kit.fontawesome.com/1664c6557b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/contact.js" type="module"></script>
+  <!-- Hotjar Tracking Code for Game Hub v2 -->
+  <script>
+    (function (h, o, t, j, a, r) {
+      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+      h._hjSettings = { hjid: 3773860, hjsv: 6 };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script'); r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <a href="index.html">
+      <img src="logo/GameHub_Logodarkgreen72.png" alt="Game Hub logo"></a>
+  </div>
+  <div class="wrapper">
+    <div class="leftside">
+      <nav>
+        <a href="index.html" class="mobilelogo"><img class="small-logo" src="logo/GameHub_LogoNoslogan72.png"
+            alt="gamehub logo home"></a>
+        <a href="profile.html" class="mobileprofile"><i class="fa-solid fa-user fa-2xl profilevector"></i>
+          <p class="nav-name">My Profile</p>
+        </a>
+        <a href="cart.html" class="mobilecart"><i class="fa-solid fa-cart-shopping fa-2xl cartvector"></i>
+          <p class="nav-name">My Cart</p>
+          <p class="cart-status"></p>
+        </a>
+        <a href="wishlist.html" class="mobilewishlist">
+          <i class="fa-solid fa-heart fa-2xl wishlistvector"></i>
+          <p class="nav-name">My Wishlist</p>
+        </a>
+        <a href="about.html" class="mobileabout">
+          <i class="fa-solid fa-circle-info fa-2xl aboutvector"></i>
+          <p class="nav-name">About Us</p>
+        </a>
+        <input type="checkbox" id="menu-checkbox">
+        <label for="menu-checkbox" class="moretext"><i class="fas fa-bars fa-3x"></i>
+          <b>more</b></label>
+        <p class="menu-more">More</p>
+        <div class="hamburger-menu">
+          <h3>Hello, Guest</h3>
+          <a href="index.html"><b>HOME</b></a>
+          <a href="contact.html">Contact us</a>
+          <a href="about.html">About us</a>
+          <a href="terms-and-conditions.html">Terms & Conditions</a>
+          <div class="smallestscreen">
+            <a href="profile.html">My profile page</a>
+            <a href="wishlist.html">My wishlist</a>
+          </div>
+          <a href="profile.html" class="logout">Log in</a>
+        </div>
+      </nav>
+    </div>
+
+    <main>
+      <div class="welcomemessage">
+        <p>WELCOME TO THE UNIVERSE OF GAMES!</p>
+      </div>
+      <div class="universal-container">
+        <section class="breadcrumbs">
+          <h4>Site Navigation</h4>
+          <p><a href="index.html">Gamehub.com</a> > <b>Contact us</b></p>
+        </section>
+        <div class="contactintro">
+          <h1>Hi there! We’re here to help you!</h1>
+          <p>
+            <b>Are you having any problems or some questions you need
+              answered?</b>
+          </p>
+          <p>
+            Don’t hesitate to get in touch! We are here to help you and answer
+            any question you might have. Contact us by filling out the form
+            below this text and we’ll be sure to get back to you as soon as
+            possible. A ticket will be sent to your email after the form is
+            submitted.
+          </p>
+        </div>
+        <div class="contact-form">
+          <form id="form" action="/" novalidate>
+            <fieldset>
+              <legend>Please fill out the form</legend>
+              <div class="input-control">
+                <label for="name">Name:*</label>
+                <input type="text" name="name" id="name" required>
+                <div class="form-error"></div>
+              </div>
+              <div class="input-control">
+                <label for="email">Email:*</label>
+                <input type="email" name="email" id="email" required>
+                <div class="form-error"></div>
+              </div>
+              <div class="input-control">
+                <label for="order_number">Order Number:</label>
+                <input type="text" name="order_number" id="order_number">
+              </div>
+              <div class="input-control">
+                <label for="regarding">Regarding:*</label>
+                <select id="regarding" name="regarding">
+                  <option value="">Please choose an option</option>
+                  <option value="download_issue">Problems downloading order</option>
+                  <option value="payment_issue">Payment issues</option>
+                  <option value="inventory_question">
+                    Questions about inventory
+                  </option>
+                  <option value="feedback">Feedback</option>
+                  <option value="other">Other</option>
+                </select>
+                <div class="form-error"></div>
+              </div>
+              <div class="input-control">
+                <label for="subject">Subject:*</label>
+                <input type="text" name="subject" id="subject" required>
+                <div class="form-error"></div>
+              </div>
+              <div class="input-control">
+                <label for="message">Message:*</label>
+                <textarea name="message" id="message" required></textarea>
+                <div class="form-error"></div>
+              </div>
+              <div class="submit-form">
+                <label for="submit">Submit contact form:</label>
+                <button type="submit" id="submit">Send</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <!--<div class="placeorder">
+                    <a href="#">
+                        <button class="placeorderbutton" type="submit">
+                        <b>Send</b>
+                        </button>
+                    </a>
+                </div>-->
+        <div class="contactinfo">
+          <p>
+            <em>If by any chance the form isn’t working you can send us an email
+              using the one provided here:</em>
+          </p>
+          <div class="emailbox">
+            <p>Email:</p>
+            <a href="#">
+              <p>customerservice@gamehub.com</p>
+            </a>
+          </div>
+
+          <p><em>or send us a direct message:</em></p>
+          <img src="vector/facebook.svg" alt="facebook">
+          <img src="vector/twitter.svg" alt="twitter">
+          <img src="vector/instagram.svg" alt="instagram">
+
+          <p>We’ll get back to you within 24 hours</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <section class="testnewsletter">
+    <div class="newsletterall">
+      <div class="testnewslettertext">
+        <h4>
+          <b>Subscribe to our Newsletter to get 15% off your next order!</b>
+        </h4>
+        <p>
+          You’ll also be the first to know about new releases and special
+          offers.
+        </p>
+      </div>
+      <div class="input-container">
+        <div class="testnewsletterinput">
+          <label for="mail">Enter your email address:</label>
+          <input class="testinputemail" id="mail" type="email" placeholder="gamehub@test.com">
+        </div>
+        <button class="subscribe" type="button">
+          <b>SUBSCRIBE</b>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="fleft">
+      <img src="vector/trustpilot.svg" alt="trustpilot">
+    </p>
+    <div class="fcenter">
+      <p>Follow us</p>
+      <div class="socials">
+        <img src="vector/facebook.svg" alt="facebook">
+        <img src="vector/twitter.svg" alt="twitter">
+        <img src="vector/instagram.svg" alt="instagram">
+        <img src="vector/twitch.svg" alt="twitch">
+      </div>
+
+      <p>Safe payment</p>
+      <img src="vector/klarna.svg" alt="klarna">
+      <img src="vector/mastercard.svg" alt="mastercard">
+      <img src="vector/visa.svg" alt="visa">
+      <img src="vector/paypal.svg" alt="paypal">
+      <p>
+        Copyright &copy; GAME HUB 2023<br>
+        All rights reserved
+      </p>
+    </div>
+    <div class="fright">
+      <ul>
+        <li><a href="terms-and-conditions.html">Terms & conditions</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><em>Contact us</em></li>
+        <!-- <li class="dead-link">FAQ</li> -->
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
