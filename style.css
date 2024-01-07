@@ -52,7 +52,7 @@
 .loader {
   font-size: 2rem;
   margin: auto;
-  color: var(--body-bg);
+  color: var(--dark-green);
   /* border: 16px solid #f3f3f3;
   border-top: 16px solid darkslategray;
   border-radius: 50%;
@@ -917,12 +917,12 @@ footer .fcenter img {
   width: 60px;
 }
 
-.released {
+/* .released {
   display: grid;
   grid-column: 1;
   grid-row: 9;
   text-align: center;
-}
+} */
 
 .added-to-cart {
   grid-column: 2;

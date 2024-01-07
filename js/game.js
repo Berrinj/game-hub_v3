@@ -33,6 +33,7 @@ async function getGame() {
     const response = await fetch(url);
     const result = await response.json();
 
+
     productContainer.innerHTML = ``;
     document.title = `Game Hub - Product Page - ${result.title}`;
     let saleFont = "";
@@ -62,7 +63,7 @@ async function getGame() {
     productContainer.innerHTML += `<div class="productquickinfo">
                                         <h1>${result.name}</h1>
                                         <img class="mainimg" src="${result.images[0].src}" alt="${result.title} cover photo">
-                                        <p class="pp-p-one">${result.description}</p>
+                                        ${result.description}
                                         <p class="availablefor">Genre: ${category}</p>
                                         <p id="instantdownload">-Instant download</p>
                                         <div class="sale">

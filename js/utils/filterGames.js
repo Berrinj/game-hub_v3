@@ -11,14 +11,11 @@ export function sortGames() {
     let selectedValue = selectSortBy.value;
     console.log("Selected Value:", selectedValue);
     switch (selectedValue) {
-        // case "all":
-        //     selectHeading.textContent = "All games";
-        //     break;
-        case "3+":
+        case "All":
             selectHeading.textContent = "All games";
             break;
-        case "12+":
-            selectHeading.textContent = "PEGI 12 games";
+        case "3+":
+            selectHeading.textContent = "PEGI 3 games";
             break;
         case "16+":
             selectHeading.textContent = "PEGI 16 games";

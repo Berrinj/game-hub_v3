@@ -52,7 +52,7 @@ function createProductCard(game) {
         if (doesObjectExist) {
             cssClass = "fa-solid";
         };
-        
+
         let price = `${game.prices.price / 100}`;
     productCard.innerHTML = `   <a href="productpage.html?id=${game.id}">
                                 <img class="productimg" src="${game.images[0].src}" alt="${game.title} product image">
@@ -77,22 +77,17 @@ function createProductCard(game) {
 }
 }
 
-
-export async function renderProducts(selectedValue = "3+") {
+export async function renderProducts(selectedValue = "All") {
    let games = await getProducts(GAMEHUB_API_URL); 
    console.log("Games Data:", games);
+
    const gameContainer = document.querySelector(".gamesrow");
-if (selectedValue !== "3+") {
-    if (selectedValue === "16+") {
-        games = games.filter((game) => game.ageRating === selectedValue);
-    } else if (selectedValue === "18+") {
-        games = games.filter((game) => game.ageRating === selectedValue);   
-    } else if (selectedValue === "12+") {
-        games = games.filter((game) => game.ageRating === selectedValue);   
+
+if (selectedValue !== "All") {
+    if (selectedValue === "16+" || selectedValue === "18+" || selectedValue === "3+") {
+        games = games.filter((game) => game.attributes[0]?.terms[0]?.name === selectedValue);
     } else if (selectedValue === "onSale"){
         games = games.filter((game) => game.on_sale);
-    } else if (selectedValue === "3+"){
-        games = games.filter((game) => game.ageRating === selectedValue);
     } else {
          games = games.filter((game) => game.categories[0].name === selectedValue);
     }
@@ -115,117 +110,4 @@ if (selectedValue !== "3+") {
 }
 
 
-// export async function renderProducts() {
-//     const games = await getProducts(GAMEHUB_API_URL); 
-//     const gameContainer = document.querySelector(".gamesrow");
-//     gameContainer.innerHTML = ``;
- 
-//      games.forEach((game) => {
-//          const productCard = createProductCard(game);
-//          gameContainer.appendChild(productCard);
-//      });
- 
-//      const favButton = document.querySelectorAll(".games-container i");
-//      favButton.forEach((button) => {
-//          button.addEventListener("click", heartIconChange);
-//      });
-//      getExistingFavs();
-//  }
-
 renderProducts();
-
-// async function getGames() {
-
-//     try {
-//     const response = await fetch(url);
-//     const result = await response.json();
-
-//     gamesRow.innerHTML = "";
-    
-
-//     for(let i = 0; i < result.length; i++){
-//         let saleFont = "";
-//         let cssClass = "far";
-//         let saleMessage = "";
-
-//         if (result[i].onSale === true) {
-//             result[i].price = result[i].discountedPrice;
-//             // saleFont = "red";
-//             saleMessage = "On sale!"
-//         };
-
-//         const doesObjectExist = favorites.find(function(fav) {
-
-//             return fav.id === result[i].id;
-//         });
-
-
-//         if (doesObjectExist) {
-//             cssClass = "fa-solid";
-//         };
-//         cartNumberOfItems.innerHTML = `<p class="cart-status">${currentCartItems.length} item(s)</p>`;
-
-//         gamesRow.innerHTML += `<div class="games-container">
-//                                     <a href="productpage.html?id=${result[i].id}">
-//                                     <img class="productimg" src="${result[i].image}">
-//                                     <h3>${result[i].title}</h3>
-//                                     <p>-Available for PS4, XBOX One and PC</p>
-//                                     <p>-Instant download</p>
-//                                     <div class="price-info">
-//                                     <div class="price-box">
-//                                     <h4 style="color: ${saleFont}">$${result[i].price}</h4>
-//                                     </div>
-//                                     <p class="on-sale-message">${saleMessage}</p>
-//                                     </div>
-//                                     </a>
-//                                     <i class="${cssClass} fa-heart fa-2xl" data-id="${result[i].id}" data-name="${result[i].title}" data-image="${result[i].image}" data-price="${result[i].price}"></i>
-//                                     </div>
-//                                     `                 
-//     };
-
-//     const favButton = document.querySelectorAll(".games-container i");
-
-//     favButton.forEach((button) => {
-//         button.addEventListener("click", heartIconChange);
-//     });
-
-    // function heartIconChange() {
-    //     this.classList.toggle("fa-regular");
-    //     this.classList.toggle("fa-solid");
-        
-    //     const idLocalStorage = this.dataset.id;
-    //     const titleLocalStorage = this.dataset.name;
-    //     const imageLocalStorage = this.dataset.image;
-    //     const priceLocalStorage = this.dataset.price;
-    
-    //     const currentFavs = getExistingFavs();
-
-    //     const productExists = currentFavs.find(function(fav) {
-    //         return fav.id === idLocalStorage;
-    //     });
-
-    //     if (!productExists) {
-    //         const product = {title: titleLocalStorage, id: idLocalStorage, image: imageLocalStorage, price: priceLocalStorage};
-    //         currentFavs.push(product);
-    //         saveFavorites(currentFavs);
-    //     } else {
-    //         const newFavs = currentFavs.filter((fav) => fav.id != idLocalStorage);
-    //         saveFavorites(newFavs);
-    //     };
-
-    // }
-
-//     getExistingFavs();
-    
-//     function saveFavorites(favs) {
-//         localStorage.setItem("favorites", JSON.stringify(favs));
-//     };
-    
-
-//     } catch (error) {
-//         main.innerHTML = `<div class="error">We are so sorry, an error occured while loading this page.</div>`;
-//         console.log(error, `Sorry, an error occured`);
-//     };
-// };
-
-// getGames();
