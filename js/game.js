@@ -99,8 +99,8 @@ async function getGame() {
 
 
 } catch(error) {
-    main.innerHTML = `<div class="error">We are so sorry, an error occured while loading this page.</div>`;
-    console.log(error, `Sorry, an error occured`);
+    main.innerHTML = `<div class="error">We are so sorry, an error occurred while loading this page.</div>`;
+    console.log(error, `Sorry, an error occurred`);
 }
 };
 getGame();

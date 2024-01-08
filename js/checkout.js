@@ -41,8 +41,8 @@ itemsInCart.forEach(inCart => {
 
 productContainer.innerHTML += `<div class="checkout-item">
                                 <img src="${inCart.image}" alt="${inCart.name} cover" class="checkout-img">
-                                <p><b>Title:</b>${inCart.name}</p>
-                                <p><b>Price:</b>${inCart.price}</p>
+                                <p><b>Title: </b>${inCart.name}</p>
+                                <p><b>Price: </b>${inCart.price} NOK</p>
                                 </div>`;
 
     let itemPrice = +inCart.price;

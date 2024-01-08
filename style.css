@@ -1271,7 +1271,7 @@ hr {
 .main-checkout {
   display: flex;
   flex-direction: column;
-
+  padding: 0 20px;
 }
 
 .checkout-header {
@@ -1318,7 +1318,8 @@ hr {
   padding: 5px;
   border: 1px solid rgb(168, 167, 167);
   margin-bottom: 5px;
-  box-shadow: 3px 5px 18px #bac5cf;
+  /* box-shadow: 3px 5px 18px #bac5cf; */
+  background: white;
 }
 
 .checkout-img {
