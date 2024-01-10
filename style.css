@@ -1951,9 +1951,10 @@ fieldset button {
     border-radius: 50%;
     position: fixed;
     bottom: 5px;
+    right: 20px;
     border: 1px solid white;
     box-shadow: 0px 0px 18px #272e55;
-    /* z-index: 100; */
+    z-index: 100;
   }
 
   .desktop {
