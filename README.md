@@ -2,8 +2,8 @@
 
 ![image](https://onedrive.live.com/embed?resid=6948AB603E194695%2184688&authkey=%21AP-aYdSmapfAXQ0&height=660) <br>
 
-Noroff JavaScript 1 CA, winter 2023
-- [View the website live on Netlify](https://gamehub-marte-v3.netlify.app/)
+Noroff JavaScript 1 CA, November 2023<br>
+[View the website live on Netlify](https://gamehub-marte-v3.netlify.app/)
 
 ## Description
 
