@@ -23,7 +23,7 @@ This project was made to learn about making a responsive website and working wit
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/Berrinj/game-hub_v3.git
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-Berrinj.git
 ```
 
 ### Running
